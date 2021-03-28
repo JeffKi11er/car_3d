@@ -269,6 +269,13 @@ GLvoid DrawGLScene()
 		glEnd();
 		glPointSize(200.0);
 
+		glColor3f(1.0, .75, 0.0);
+		glPointSize(50.0);
+		glBegin(GL_POINTS);
+		glVertex3f(1.9, 0.3, 0.3);
+		glVertex3f(1.9, 0.3, 0.5);
+		glEnd();
+		glPointSize(200.0);
 
 
 		glBegin(GL_QUADS);
@@ -594,16 +601,16 @@ GLvoid DrawGLScene()
 		/*Banh xe*/
 		glTranslatef(0.7, 0.2, 0.6);
 		glColor3f(0.7098, 0.5137, 0.7608);
-		glutSolidTorus(0.025, 0.07, 10, 25);
+		glutSolidTorus(0.035, 0.09, 10, 25);
 
 		glTranslatef(0, 0, -0.4);
-		glutSolidTorus(0.025, 0.07, 10, 25);
+		glutSolidTorus(0.035, 0.09, 10, 25);
 
 		glTranslatef(0.95, 0, 0);
-		glutSolidTorus(0.025, 0.07, 10, 25);
+		glutSolidTorus(0.035, 0.09, 10, 25);
 
 		glTranslatef(0, 0, 0.4);
-		glutSolidTorus(0.025, 0.07, 10, 25);
+		glutSolidTorus(0.035, 0.09, 10, 25);
 		glPopMatrix();
 
 		glPopMatrix();
