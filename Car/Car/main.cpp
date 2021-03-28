@@ -7,7 +7,6 @@
 
 
 #define ESCAPE 27
-
 GLint window;
 GLint window2;
 GLint Xsize = 1800;
