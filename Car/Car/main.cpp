@@ -264,8 +264,8 @@ GLvoid DrawGLScene()
 		glColor3f(1.0, .75, 0.0);
 		glPointSize(30.0);
 		glBegin(GL_POINTS);
-		glVertex3f(0.2, 0.3, 0.3);
-		glVertex3f(0.2, 0.3, 0.5);
+		glVertex3f(0.3, 0.3, 0.3);
+		glVertex3f(0.3, 0.3, 0.5);
 		glEnd();
 		glPointSize(200.0);
 
@@ -275,44 +275,50 @@ GLvoid DrawGLScene()
 
 		/* top of cube*/
 		//************************FRONT BODY****************************************
-		glColor3f(r, g, b);
+		glColor3f(0.8118, 0.0, 0.0);
 		/*Phan mui xe*/
-		glVertex3f(0.2, 0.4, 0.6);
-		glVertex3f(0.6, 0.5, 0.6);
-		glVertex3f(0.6, 0.5, 0.2);
-		glVertex3f(0.2, 0.4, 0.2);
+		glVertex3f(0.3f, 0.4f, 0.6f);
+		glVertex3f(0.6f, 0.5f, 0.6f);
+		glVertex3f(0.6f, 0.5f, 0.2f);
+		glVertex3f(0.3f, 0.4f, 0.2f);
 
 		/* bottom of cube*/
-		glVertex3f(0.2, 0.2, 0.6);
-		glVertex3f(0.6, 0.2, 0.6);
-		glVertex3f(0.6, 0.2, 0.2);
-		glVertex3f(0.2, 0.2, 0.2);
+		glColor3f(0.2f, 0.5f, 0.3f);
+		glVertex3f(0.3f, 0.2f, 0.6f);
+		glVertex3f(0.6f, 0.2f, 0.6f);
+		glVertex3f(0.6f, 0.2f, 0.2f);
+		glVertex3f(0.3f, 0.2f, 0.2f);
 
 		/* front of cube*/
-		glVertex3f(0.2, 0.2, 0.6);
-		glVertex3f(0.2, 0.4, 0.6);
-		glVertex3f(0.2, 0.4, 0.2);
-		glVertex3f(0.2, 0.2, 0.2);
+		glColor3f(0.7098, 0.5137, 0.7608);
+		glVertex3f(0.3, 0.2, 0.6);
+		glVertex3f(0.3, 0.4, 0.6);
+		glVertex3f(0.3, 0.4, 0.2);
+		glVertex3f(0.3, 0.2, 0.2);
 
 		/* back of cube.*/
+		glColor3f(0.7961, 0.8078, 0.2314);
 		glVertex3f(0.6, 0.2, 0.6);
 		glVertex3f(0.6, 0.5, 0.6);
 		glVertex3f(0.6, 0.5, 0.2);
 		glVertex3f(0.6, 0.2, 0.2);
 
 		/* left of cube*/
-		glVertex3f(0.2, 0.2, 0.6);
-		glVertex3f(0.6, 0.2, 0.6);
-		glVertex3f(0.6, 0.5, 0.6);
-		glVertex3f(0.2, 0.4, 0.6);
+		glColor3f(0.2314, 0.5961, 0.8078);
+		glVertex3f(0.3f, 0.2f, 0.6f);
+		glVertex3f(0.6f, 0.2f, 0.6f);
+		glVertex3f(0.6f, 0.5f, 0.6f);
+		glVertex3f(0.3f, 0.4f, 0.6f);
 
 		/* Right of cube */
-		glVertex3f(0.2, 0.2, 0.2);
-		glVertex3f(0.6, 0.2, 0.2);
-		glVertex3f(0.6, 0.5, 0.2);
-		glVertex3f(0.2, 0.4, 0.2);
+		glColor3f(0.8078, 0.2314, 0.3255);
+		glVertex3f(0.3f, 0.2f, 0.2f);
+		glVertex3f(0.6f, 0.2f, 0.2f);
+		glVertex3f(0.6f, 0.5f, 0.2f);
+		glVertex3f(0.3f, 0.4f, 0.2f);
 		//****************************************************************************
 		/*Phan mui tran xe*/
+		glColor3f(r, g, b);
 		glVertex3f(0.7, 0.65, 0.6);
 		glVertex3f(0.7, 0.65, 0.2);
 		glVertex3f(1.7, 0.65, 0.2);        //top cover
@@ -320,37 +326,42 @@ GLvoid DrawGLScene()
 		//***************************back guard******************************
 		
 		/*Phan duoi xe*/
-		glColor3f(r, g, b);            /* Set The Color To Blue*/
+		glColor3f(0.8118, 0.0, 0.0);           /* Set The Color To Blue*/
 		glVertex3f(1.8, 0.5, 0.6);
 		glVertex3f(1.8, 0.5, 0.2);
-		glVertex3f(2.1, 0.4, 0.2);
-		glVertex3f(2.1, 0.4, 0.6);
+		glVertex3f(1.9, 0.4, 0.2);
+		glVertex3f(1.9, 0.4, 0.6);
 
 		/* bottom of cube*/
-		glVertex3f(2.1, 0.2, 0.6);
-		glVertex3f(2.1, 0.2, 0.2);
-		glVertex3f(1.8, 0.2, 0.6);
+		glColor3f(0.2, 0.5, 0.3);
+		glVertex3f(1.9, 0.2, 0.6);
+		glVertex3f(1.9, 0.2, 0.2);
+		glVertex3f(1.8, 0.2, 0.2);
 		glVertex3f(1.8, 0.2, 0.6);
 
 		/* back of cube.*/
-		glVertex3f(2.1, 0.4, 0.6);
-		glVertex3f(2.1, 0.4, 0.2);
-		glVertex3f(2.1, 0.2, 0.2);
-		glVertex3f(2.1, 0.2, 0.6);
+		glColor3f(0.8078, 0.2314, 0.3255);
+		glVertex3f(1.9, 0.4, 0.6);
+		glVertex3f(1.9, 0.4, 0.2);
+		glVertex3f(1.9, 0.2, 0.2);
+		glVertex3f(1.9, 0.2, 0.6);
 
 		/* left of cube*/
+		glColor3f(0.7961, 0.8078, 0.2314);
 		glVertex3f(1.8, 0.2, 0.2);
 		glVertex3f(1.8, 0.5, 0.2);
-		glVertex3f(2.1, 0.4, 0.2);
-		glVertex3f(2.1, 0.2, 0.2);
+		glVertex3f(1.9, 0.4, 0.2);
+		glVertex3f(1.9, 0.2, 0.2);
 
 		/* Right of cube */
+		glColor3f(0.7098, 0.5137, 0.7608);
 		glVertex3f(1.8, 0.2, 0.6);
 		glVertex3f(1.8, 0.5, 0.6);
-		glVertex3f(2.1, 0.4, 0.6);
-		glVertex3f(2.1, 0.2, 0.6);
+		glVertex3f(1.9, 0.4, 0.6);
+		glVertex3f(1.9, 0.2, 0.6);
 		//******************MIDDLE BODY************************************
 		/*Than xe*/
+		glColor3f(r, g, b);
 		glVertex3f(0.6, 0.5, 0.6);
 		glVertex3f(0.6, 0.2, 0.6);
 		glVertex3f(1.8, 0.2, 0.6);
@@ -538,55 +549,57 @@ GLvoid DrawGLScene()
 
 		glEnd();
 		//************IGNITION SYSTEM**********************************
+		/*Bo xe*/
 		glPushMatrix();
-		glColor3f(0.7, 0.7, 0.7);
-		glTranslatef(1.65, 0.2, 0.3);
+		glColor3f(0.8118, 0.0, 0.0);
+		glTranslatef(1.41, 0.2, 0.3);
 		glRotatef(90.0, 0, 1, 0);
 		gluCylinder(t, 0.02, 0.03, .5, 10, 10);
 		glPopMatrix();
 		//********************WHEEL*********************************************
-
+		/*Banh xe*/
 		glColor3f(0.7, 0.7, 0.7);
 		glPushMatrix();
 		glBegin(GL_LINE_STRIP);
 		for (theta = 0; theta < 360; theta = theta + 20)
 		{
-			glVertex3f(0.6, 0.2, 0.62);
-			glVertex3f(0.6 + (0.08 * (cos(((theta + angle) * 3.14) / 180))), 0.2 + (0.08 * (sin(((theta + angle) * 3.14) / 180))), 0.62);
+			glVertex3f(0.7, 0.2, 0.62);
+			glVertex3f(0.7 + (0.08 * (cos(((theta + angle) * 3.14) / 180))), 0.2 + (0.08 * (sin(((theta + angle) * 3.14) / 180))), 0.62);
 		}
 		glEnd();
 
 		glBegin(GL_LINE_STRIP);
 		for (theta = 0; theta < 360; theta = theta + 20)
 		{
-			glVertex3f(0.6, 0.2, 0.18);
-			glVertex3f(0.6 + (0.08 * (cos(((theta + angle) * 3.14) / 180))), 0.2 + (0.08 * (sin(((theta + angle) * 3.14) / 180))), 0.18);
+			glVertex3f(0.7, 0.2, 0.18);
+			glVertex3f(0.7 + (0.08 * (cos(((theta + angle) * 3.14) / 180))), 0.2 + (0.08 * (sin(((theta + angle) * 3.14) / 180))), 0.18);
 		}
 		glEnd();
 
 		glBegin(GL_LINE_STRIP);
 		for (theta = 0; theta < 360; theta = theta + 20)
 		{
-			glVertex3f(1.7, 0.2, 0.18);
-			glVertex3f(1.7 + (0.08 * (cos(((theta + angle) * 3.14) / 180))), 0.2 + (0.08 * (sin(((theta + angle) * 3.14) / 180))), 0.18);
+			glVertex3f(1.65, 0.2, 0.18);
+			glVertex3f(1.65 + (0.08 * (cos(((theta + angle) * 3.14) / 180))), 0.2 + (0.08 * (sin(((theta + angle) * 3.14) / 180))), 0.18);
 		}
 		glEnd();
 
 		glBegin(GL_LINE_STRIP);
 		for (theta = 0; theta < 360; theta = theta + 20)
 		{
-			glVertex3f(1.7, 0.2, 0.62);
-			glVertex3f(1.7 + (0.08 * (cos(((theta + angle) * 3.14) / 180))), 0.2 + (0.08 * (sin(((theta + angle) * 3.14) / 180))), 0.62);
+			glVertex3f(1.65, 0.2, 0.62);
+			glVertex3f(1.65 + (0.08 * (cos(((theta + angle) * 3.14) / 180))), 0.2 + (0.08 * (sin(((theta + angle) * 3.14) / 180))), 0.62);
 		}
 		glEnd();
-		glTranslatef(0.6, 0.2, 0.6);
-		glColor3f(0, 0, 0);
+		/*Banh xe*/
+		glTranslatef(0.7, 0.2, 0.6);
+		glColor3f(0.7098, 0.5137, 0.7608);
 		glutSolidTorus(0.025, 0.07, 10, 25);
 
 		glTranslatef(0, 0, -0.4);
 		glutSolidTorus(0.025, 0.07, 10, 25);
 
-		glTranslatef(1.1, 0, 0);
+		glTranslatef(0.95, 0, 0);
 		glutSolidTorus(0.025, 0.07, 10, 25);
 
 		glTranslatef(0, 0, 0.4);
