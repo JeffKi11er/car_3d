@@ -276,6 +276,7 @@ GLvoid DrawGLScene()
 		/* top of cube*/
 		//************************FRONT BODY****************************************
 		glColor3f(r, g, b);
+		/*Phan mui xe*/
 		glVertex3f(0.2, 0.4, 0.6);
 		glVertex3f(0.6, 0.5, 0.6);
 		glVertex3f(0.6, 0.5, 0.2);
@@ -311,11 +312,14 @@ GLvoid DrawGLScene()
 		glVertex3f(0.6, 0.5, 0.2);
 		glVertex3f(0.2, 0.4, 0.2);
 		//****************************************************************************
+		/*Phan mui tran xe*/
 		glVertex3f(0.7, 0.65, 0.6);
 		glVertex3f(0.7, 0.65, 0.2);
 		glVertex3f(1.7, 0.65, 0.2);        //top cover
 		glVertex3f(1.7, 0.65, 0.6);
 		//***************************back guard******************************
+		
+		/*Phan duoi xe*/
 		glColor3f(r, g, b);            /* Set The Color To Blue*/
 		glVertex3f(1.8, 0.5, 0.6);
 		glVertex3f(1.8, 0.5, 0.2);
@@ -346,6 +350,7 @@ GLvoid DrawGLScene()
 		glVertex3f(2.1, 0.4, 0.6);
 		glVertex3f(2.1, 0.2, 0.6);
 		//******************MIDDLE BODY************************************
+		/*Than xe*/
 		glVertex3f(0.6, 0.5, 0.6);
 		glVertex3f(0.6, 0.2, 0.6);
 		glVertex3f(1.8, 0.2, 0.6);
@@ -363,6 +368,8 @@ GLvoid DrawGLScene()
 		glVertex3f(1.8, 0.2, 0.2);
 		glVertex3f(1.8, 0.5, 0.2);
 		//*********************ENTER WINDOW**********************************
+		
+		/*Cua so 2 ben*/
 		glColor3f(0.3, 0.3, 0.3);
 		glVertex3f(0.75, 0.63, 0.2);
 		glVertex3f(0.75, 0.5, 0.2);        //quad front window
@@ -431,7 +438,7 @@ GLvoid DrawGLScene()
 
 		//**************************************************************
 		glBegin(GL_QUADS);
-
+		/*Cua so phia truoc sau*/
 		/* top of cube*/
 		glColor3f(0.3, 0.3, 0.3);
 		glVertex3f(0.6, 0.5, 0.6);
@@ -510,7 +517,7 @@ GLvoid DrawGLScene()
 		}
 		//*************************************************************************************************
 		glBegin(GL_TRIANGLES);                /* start drawing the cube.*/
-
+		/*Canh cua so truoc va sau xe*/
 		  /* top of cube*/
 		glColor3f(0.3, 0.3, 0.3);
 		glVertex3f(0.6, 0.5, 0.6);
