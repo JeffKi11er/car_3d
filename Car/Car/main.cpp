@@ -1,12 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <GL\freeglut.h>
+#include <GL\glut.h>
 #include <math.h>
 #include <string.h>
 
 
 
 #define ESCAPE 27
+
 GLint window;
 GLint window2;
 GLint Xsize = 1800;
@@ -40,6 +41,17 @@ int view = 0;
 int flag1 = 0, aflag = 1;
 int flag2 = 0, wheelflag = 0;
 GLUquadricObj* t;
+
+//a
+float pos_x, pos_y, pos_z;
+
+
+int x_old = 0, y_old = 0;
+int current_scroll = 5;
+float zoom_per_scroll;
+
+bool is_holding_mouse = false;
+bool is_updated = false;
 
 static void SpecialKeyFunc(int Key, int x, int y);
 
@@ -135,6 +147,55 @@ void display1(void)
 	glutSwapBuffers();
 
 }
+
+void mouse(int button, int state, int x, int y) {
+    is_updated = true;
+
+    if (button == GLUT_LEFT_BUTTON) {
+        if (state == GLUT_DOWN) {
+            x_old = x;
+            y_old = y;
+            is_holding_mouse = true;
+        } else
+            is_holding_mouse = false;
+    } else if (state == GLUT_UP) {
+        switch (button) {
+        case 3:
+            if (current_scroll > 0) {
+                current_scroll--;
+                pos_z += zoom_per_scroll;
+            }
+            break;
+        case 4:
+            if (current_scroll < 15) {
+                current_scroll++;
+                pos_z -= zoom_per_scroll;
+            }
+            break;
+        }
+    }
+}
+
+void motion(int x, int y) {
+    if (is_holding_mouse) {
+        is_updated = true;
+
+        yangle += (x - x_old);
+        x_old = x;
+        if (yangle > 360.0f)
+            yangle -= 360.0f;
+        else if (yangle < 0.0f)
+            yangle += 360.0f;
+
+        xangle += (y - y_old);
+        y_old = y;
+        if (xangle > 90.0f)
+            xangle = 90.0f;
+        else if (xangle < -90.0f)
+            xangle = -90.0f;
+    }
+}
+
 
 GLvoid DrawGLScene()
 {
@@ -833,7 +894,8 @@ int main(int argc, char** argv)
 
 	glutReshapeFunc(myreshape);
 	glutDisplayFunc(DrawGLScene);
-
+	glutMouseFunc(mouse);
+	glutMotionFunc(motion);
 	glutKeyboardFunc(NormalKey);
 	glutSpecialFunc(SpecialKeyFunc);
 	InitGL(Xsize, Ysize);
