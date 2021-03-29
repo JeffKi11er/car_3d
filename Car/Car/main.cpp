@@ -282,7 +282,7 @@ GLvoid DrawGLScene()
 
 		/* top of cube*/
 		//************************FRONT BODY****************************************
-		glColor3f(0.8118, 0.0, 0.0);
+		glColor3f(r, g, b);
 		/*Phan mui xe*/
 		glVertex3f(0.3f, 0.4f, 0.6f);
 		glVertex3f(0.6f, 0.5f, 0.6f);
@@ -290,35 +290,30 @@ GLvoid DrawGLScene()
 		glVertex3f(0.3f, 0.4f, 0.2f);
 
 		/* bottom of cube*/
-		glColor3f(0.2f, 0.5f, 0.3f);
 		glVertex3f(0.3f, 0.2f, 0.6f);
 		glVertex3f(0.6f, 0.2f, 0.6f);
 		glVertex3f(0.6f, 0.2f, 0.2f);
 		glVertex3f(0.3f, 0.2f, 0.2f);
 
 		/* front of cube*/
-		glColor3f(0.7098, 0.5137, 0.7608);
 		glVertex3f(0.3, 0.2, 0.6);
 		glVertex3f(0.3, 0.4, 0.6);
 		glVertex3f(0.3, 0.4, 0.2);
 		glVertex3f(0.3, 0.2, 0.2);
 
 		/* back of cube.*/
-		glColor3f(0.7961, 0.8078, 0.2314);
 		glVertex3f(0.6, 0.2, 0.6);
 		glVertex3f(0.6, 0.5, 0.6);
 		glVertex3f(0.6, 0.5, 0.2);
 		glVertex3f(0.6, 0.2, 0.2);
 
 		/* left of cube*/
-		glColor3f(0.2314, 0.5961, 0.8078);
 		glVertex3f(0.3f, 0.2f, 0.6f);
 		glVertex3f(0.6f, 0.2f, 0.6f);
 		glVertex3f(0.6f, 0.5f, 0.6f);
 		glVertex3f(0.3f, 0.4f, 0.6f);
 
 		/* Right of cube */
-		glColor3f(0.8078, 0.2314, 0.3255);
 		glVertex3f(0.3f, 0.2f, 0.2f);
 		glVertex3f(0.6f, 0.2f, 0.2f);
 		glVertex3f(0.6f, 0.5f, 0.2f);
@@ -333,35 +328,31 @@ GLvoid DrawGLScene()
 		//***************************back guard******************************
 		
 		/*Phan duoi xe*/
-		glColor3f(0.8118, 0.0, 0.0);           /* Set The Color To Blue*/
+		glColor3f(r, g, b);          /* Set The Color To Blue*/
 		glVertex3f(1.8, 0.5, 0.6);
 		glVertex3f(1.8, 0.5, 0.2);
 		glVertex3f(1.9, 0.4, 0.2);
 		glVertex3f(1.9, 0.4, 0.6);
 
 		/* bottom of cube*/
-		glColor3f(0.2, 0.5, 0.3);
 		glVertex3f(1.9, 0.2, 0.6);
 		glVertex3f(1.9, 0.2, 0.2);
 		glVertex3f(1.8, 0.2, 0.2);
 		glVertex3f(1.8, 0.2, 0.6);
 
 		/* back of cube.*/
-		glColor3f(0.8078, 0.2314, 0.3255);
 		glVertex3f(1.9, 0.4, 0.6);
 		glVertex3f(1.9, 0.4, 0.2);
 		glVertex3f(1.9, 0.2, 0.2);
 		glVertex3f(1.9, 0.2, 0.6);
 
 		/* left of cube*/
-		glColor3f(0.7961, 0.8078, 0.2314);
 		glVertex3f(1.8, 0.2, 0.2);
 		glVertex3f(1.8, 0.5, 0.2);
 		glVertex3f(1.9, 0.4, 0.2);
 		glVertex3f(1.9, 0.2, 0.2);
 
 		/* Right of cube */
-		glColor3f(0.7098, 0.5137, 0.7608);
 		glVertex3f(1.8, 0.2, 0.6);
 		glVertex3f(1.8, 0.5, 0.6);
 		glVertex3f(1.9, 0.4, 0.6);
@@ -900,7 +891,7 @@ void myreshape(int w, int h)
 	if (w <= h)
 		glOrtho(-2.0, 2.0, -2.0 * (GLfloat)h / (GLfloat)w, 2.0 * (GLfloat)h / (GLfloat)w, -10.0, 10.0);
 	else
-		glOrtho(-2.0 * (GLfloat)w / (GLfloat)h, 2.0 * (GLfloat)w / (GLfloat)h, -2.0, 2.0, -10.0, 10.0);
+		glOrtho(-2.0 * (GLfloat)w / (GLfloat)h, 2.0 * (GLfloat)		 w / (GLfloat)h, -2.0, 2.0, -10.0, 10.0);
 	glMatrixMode(GL_MODELVIEW);
 	glutPostRedisplay();
 }
